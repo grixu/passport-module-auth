@@ -1,6 +1,6 @@
 {
     "name": "grixu/passport-module-auth",
-    "description": "This package provides model, commands & middleware to easily forbid access to certain modules(domains in DDD) when using Client Credentials Grant Tokens",
+    "description": "This package provides model, command & middleware to easily forbid access to certain modules(domains in DDD) when using Client Credentials Grant Tokens",
     "keywords": [
         "grixu",
         "passport-module-auth"
