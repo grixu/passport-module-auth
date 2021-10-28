@@ -29,7 +29,8 @@ class ModuleAuthMiddlewareEmptyConfigTest extends BaseTestCase
         $obj = new ModuleAuthMiddleware();
 
         try {
-            $result = $obj->handle(new Request(), \Closure::fromCallable(function ($request) {}), 'product');
+            $result = $obj->handle(new Request(), \Closure::fromCallable(function ($request) {
+            }), 'product');
 
             $this->assertTrue(false);
         } catch (AccessDeniedException $e) {

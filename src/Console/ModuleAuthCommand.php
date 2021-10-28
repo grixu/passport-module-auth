@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Grixu\PassportModuleAuth\Console;
-
 
 use Grixu\PassportModuleAuth\Models\ClientModule;
 use Illuminate\Console\Command;
@@ -75,7 +73,7 @@ class ModuleAuthCommand extends Command
 
         ClientModule::create([
             'client_id' => $client->id,
-            'module' => $module
+            'module' => $module,
                              ]);
 
         $this->info('Record added');
@@ -102,7 +100,7 @@ class ModuleAuthCommand extends Command
 
         $clientModule = ClientModule::find($deleteId);
 
-        if($clientModule == null) {
+        if ($clientModule == null) {
             $this->error('Wrong ID');
             return $this->deleteEntry();
         }
@@ -116,16 +114,16 @@ class ModuleAuthCommand extends Command
 
     public function handle()
     {
-        if(!Schema::hasTable('client_modules')) {
+        if (!Schema::hasTable('client_modules')) {
             $this->error('No Module Auth table detected. Run migrations first!');
             return 0;
         }
 
         $this->info('Passport Module Auth');
         $this->info('---------------------');
-        $choice = $this->choice('Select command:', ['Show modules', 'Show entries', 'Add entry', 'Delete entry', 'Exit'], 0);
+        $choice = $this->choice('Select command:', ['Show modules', 'Show entries', 'Add entry', 'Delete entry', 'Exit'], 'Show modules');
 
-        switch($choice) {
+        switch ($choice) {
             case 'Show modules':
                 return $this->showModules();
             case 'Show entries':
@@ -163,7 +161,7 @@ class ModuleAuthCommand extends Command
     {
         $choice = $this->confirm('Would you like come back to menu?');
 
-        if($choice) {
+        if ($choice) {
             return $this->handle();
         }
 

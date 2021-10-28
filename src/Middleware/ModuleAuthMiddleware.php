@@ -31,9 +31,11 @@ class ModuleAuthMiddleware
 
         $bearerToken = $request->bearerToken();
         $parser = Configuration::forUnsecuredSigner()->parser();
+        /** @phpstan-ignore-next-line */
         $tokenId = $parser->parse($bearerToken)->claims()->get('jti');
 
         try {
+            /** @phpstan-ignore-next-line */
             $client = Token::findOrFail($tokenId)->client_id;
         } catch (Exception $exception) {
             throw new ClientNotFoundException();
@@ -44,7 +46,7 @@ class ModuleAuthMiddleware
                 ->where(
                     [
                         ['client_id', '=', $client],
-                        ['module', '=', $module]
+                        ['module', '=', $module],
                     ]
                 )
                 ->firstOrFail();

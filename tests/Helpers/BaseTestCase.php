@@ -30,6 +30,5 @@ class BaseTestCase extends TestCase
         (new CreateClientModuleTable())->up();
         (new CreateOauthAccessTokensTable())->up();
         (new CreateOauthClientsTable())->up();
-
     }
 }

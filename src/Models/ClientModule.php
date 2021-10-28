@@ -16,7 +16,7 @@ class ClientModule extends Model
 
     protected $casts = [
         'client_id' => 'integer',
-        'module' => 'string'
+        'module' => 'string',
     ];
 
     protected $fillable = [

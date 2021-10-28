@@ -9,6 +9,6 @@ return [
         'customer',
         'warehouse',
         'operator',
-        'description'
-    ]
+        'description',
+    ],
 ];

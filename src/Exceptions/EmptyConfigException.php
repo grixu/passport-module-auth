@@ -14,7 +14,7 @@ class EmptyConfigException extends Exception
     {
         return response()->json(
             [
-                'message' => 'Empty configuration for PassportModuleAuth'
+                'message' => 'Empty configuration for PassportModuleAuth',
             ],
             500
         );
