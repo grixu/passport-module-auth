@@ -2,6 +2,12 @@
 
 All notable changes to `passport-module-auth` will be documented in this file
 
+## 1.1.1 - 2021-11-08
+
+- Updated Larastan to `1.0.1`
+- Updated email address in repository files
+- Changed master to main
+
 ## 1.1.0 - 2021-10-28
 
 - Added code quality tools such as PHP_CS_Fixer, PHP Insights & PHPStan
