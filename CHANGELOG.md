@@ -2,6 +2,17 @@
 
 All notable changes to `passport-module-auth` will be documented in this file
 
+## 1.2.0 - 2021-11-17
+
+- Added `composer-git-hooks`
+- Configured hooks with auto-install/update
+- Added timeouts in pipelines
+- Added  auto-merge pipeline for small updates made by dependabot
+- Added `x-ray`
+- Added `x-ray` checking in CI pipeline
+- Added `x-ray` checking in git hooks
+- Added `changelog-updater-action` to CD pipeline
+
 ## 1.1.1 - 2021-11-08
 
 - Updated Larastan to `1.0.1`
